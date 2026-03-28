@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authwell — AI-Powered Prior Authorization</title>
+  <meta name="description" content="Authwell streamlines prior authorization for medical practices. AI-powered intake, duplicate detection, and payer rule intelligence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #1a1a2e; background: #fafbfc; -webkit-font-smoothing: antialiased; }
+
+    .nav { padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; }
+    .logo { font-size: 1.5rem; font-weight: 700; color: #0d9488; letter-spacing: -0.02em; }
+    .logo span { color: #1a1a2e; }
+    .nav-link { font-size: 0.875rem; font-weight: 500; color: #64748b; text-decoration: none; margin-left: 2rem; }
+    .nav-link:hover { color: #0d9488; }
+
+    .hero { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 4rem; text-align: center; }
+    .hero h1 { font-size: 3.25rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; color: #0f172a; }
+    .hero h1 em { font-style: normal; color: #0d9488; }
+    .hero p { margin-top: 1.5rem; font-size: 1.2rem; color: #475569; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .hero-cta { margin-top: 2.5rem; display: inline-flex; gap: 1rem; }
+    .btn { display: inline-flex; align-items: center; padding: 0.8rem 1.75rem; border-radius: 0.5rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.15s; }
+    .btn-primary { background: #0d9488; color: #fff; }
+    .btn-primary:hover { background: #0f766e; }
+    .btn-secondary { background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
+    .btn-secondary:hover { background: #e2e8f0; }
+
+    .features { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 2rem; }
+    .card-icon { width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1rem; }
+    .card-icon.teal { background: #ccfbf1; color: #0d9488; }
+    .card-icon.purple { background: #ede9fe; color: #7c3aed; }
+    .card-icon.amber { background: #fef3c7; color: #d97706; }
+    .card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.9rem; color: #64748b; line-height: 1.6; }
+
+    .stats { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center; }
+    .stat-num { font-size: 2.5rem; font-weight: 700; color: #0d9488; }
+    .stat-label { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
+
+    .integrations { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+    .integrations h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .integrations p { color: #64748b; max-width: 600px; margin: 0 auto 2rem; }
+    .integration-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .integration-badge { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 2rem; padding: 0.5rem 1.25rem; font-size: 0.85rem; font-weight: 500; color: #334155; }
+
+    footer { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #94a3b8; }
+    footer a { color: #64748b; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.25rem; }
+      .features { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">auth<span>well</span></div>
+    <div>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#integrations" class="nav-link">Integrations</a>
+      <a href="mailto:rob.crider@gmail.com" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Prior authorization,<br><em>handled by AI.</em></h1>
+    <p>Authwell automates the PA workflow for small medical practices. From fax intake to payer submission, every step is faster, smarter, and tracked.</p>
+    <div class="hero-cta">
+      <a href="https://authwell.seafin.ai" class="btn btn-primary">Open Dashboard</a>
+      <a href="mailto:rob.crider@gmail.com" class="btn btn-secondary">Get in Touch</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><div class="stat-num">60+</div><div class="stat-label">Medications mapped</div></div>
+    <div><div class="stat-num">7</div><div class="stat-label">PA requirement templates</div></div>
+    <div><div class="stat-num">85%</div><div class="stat-label">Auto-classification accuracy</div></div>
+    <div><div class="stat-num">&lt;30s</div><div class="stat-label">Intake to case creation</div></div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="card">
+      <div class="card-icon teal">&#9889;</div>
+      <h3>AI-Powered Intake</h3>
+      <p>Upload faxes and documents. AI classifies the document type, extracts patient data, medication, payer, and CoverMyMeds key automatically.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">&#128270;</div>
+      <h3>Duplicate Detection</h3>
+      <p>Multi-signal scoring matches incoming faxes against existing cases by DOB, member ID, medication, and patient name. Pharmacy automation duplicates caught instantly.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">&#128203;</div>
+      <h3>Requirement Templates</h3>
+      <p>Verified PA requirements for 60+ medications across 7 template patterns. The AI assistant shows exactly what documentation is needed and what's missing.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon teal">&#128172;</div>
+      <h3>AI Case Assistant</h3>
+      <p>Context-aware chat agent on every case. Knows the patient history, payer rules, uploaded documents, and denial reasons. Drafts appeal letters on demand.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">&#128202;</div>
+      <h3>Payer Intelligence</h3>
+      <p>Track approval rates, common denial reasons, and payer-specific rules. The system learns from every case outcome and gets smarter over time.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">&#128231;</div>
+      <h3>Fax &amp; Document Management</h3>
+      <p>Kanban pipeline from new through approved. Upload documents, send faxes, track timelines, and manage the full PA lifecycle in one place.</p>
+    </div>
+  </section>
+
+  <section id="integrations" class="integrations">
+    <h2>Built for the PA ecosystem</h2>
+    <p>Integrates with the tools your practice already uses.</p>
+    <div class="integration-grid">
+      <span class="integration-badge">CoverMyMeds</span>
+      <span class="integration-badge">Clerk Auth</span>
+      <span class="integration-badge">PostgreSQL + pgvector</span>
+      <span class="integration-badge">OpenRouter AI</span>
+      <span class="integration-badge">FHIR Da Vinci PAS (2027)</span>
+      <span class="integration-badge">CMS Medicare Formulary</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 Authwell. Built by USEye LLC.</span>
+    <a href="mailto:rob.crider@gmail.com">rob.crider@gmail.com</a>
+  </footer>
+</body>
+</html>
