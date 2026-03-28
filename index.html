@@ -8,7 +8,9 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: #0f172a; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #f0f7fb; color: #0f172a; -webkit-font-smoothing: antialiased; overflow-x: hidden; position: relative; }
+    .wave-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+    .wave-bg::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #f0f7fb 0%, #f5fafd 40%, #eef6f9 100%); }
 
     /* Nav */
     nav { max-width: 960px; margin: 0 auto; padding: 2rem 2rem 0; display: flex; justify-content: space-between; align-items: center; }
@@ -58,6 +60,22 @@
   </style>
 </head>
 <body>
+
+  <div class="wave-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="w1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#bae6e2" stop-opacity="0.25"/><stop offset="100%" stop-color="#a5d4e6" stop-opacity="0.15"/></linearGradient>
+        <linearGradient id="w2" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#c7dff0" stop-opacity="0.2"/><stop offset="100%" stop-color="#b8e0d8" stop-opacity="0.12"/></linearGradient>
+        <linearGradient id="w3" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d4eaf6" stop-opacity="0.18"/><stop offset="100%" stop-color="#c2e8e0" stop-opacity="0.1"/></linearGradient>
+        <radialGradient id="gl" cx="30%" cy="40%" r="50%"><stop offset="0%" stop-color="#fff" stop-opacity="0.6"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1440" height="900" fill="url(#gl)"/>
+      <path fill="url(#w1)"><animate attributeName="d" dur="25s" repeatCount="indefinite" values="M0,400 C200,300 400,500 600,350 C800,200 1000,450 1200,350 C1350,280 1440,380 1440,380 L1440,900 L0,900Z;M0,350 C200,450 400,280 600,400 C800,500 1000,300 1200,400 C1350,450 1440,350 1440,350 L1440,900 L0,900Z;M0,400 C200,300 400,500 600,350 C800,200 1000,450 1200,350 C1350,280 1440,380 1440,380 L1440,900 L0,900Z"/></path>
+      <path fill="url(#w2)"><animate attributeName="d" dur="20s" repeatCount="indefinite" values="M0,500 C180,380 360,580 540,450 C720,320 900,520 1080,420 C1260,340 1440,480 1440,480 L1440,900 L0,900Z;M0,450 C180,550 360,380 540,500 C720,600 900,400 1080,500 C1260,550 1440,420 1440,420 L1440,900 L0,900Z;M0,500 C180,380 360,580 540,450 C720,320 900,520 1080,420 C1260,340 1440,480 1440,480 L1440,900 L0,900Z"/></path>
+      <path fill="url(#w3)"><animate attributeName="d" dur="18s" repeatCount="indefinite" values="M0,200 C240,280 480,120 720,230 C960,340 1200,180 1440,250 L1440,0 L0,0Z;M0,250 C240,150 480,300 720,200 C960,100 1200,280 1440,200 L1440,0 L0,0Z;M0,200 C240,280 480,120 720,230 C960,340 1200,180 1440,250 L1440,0 L0,0Z"/></path>
+      <path stroke="#b0d8d0" stroke-width="1.5" fill="none" opacity="0.15"><animate attributeName="d" dur="30s" repeatCount="indefinite" values="M0,300 C360,200 720,450 1080,300 C1260,220 1440,350 1440,350;M0,350 C360,450 720,250 1080,380 C1260,440 1440,300 1440,300;M0,300 C360,200 720,450 1080,300 C1260,220 1440,350 1440,350"/></path>
+    </svg>
+  </div>
 
   <nav>
     <div class="mark"><b>auth</b>well</div>
